@@ -1,0 +1,22 @@
+package words.fileoperation;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Scanner;
+public class Enquiry {
+    public static void main(String[] args) {
+        String product;
+        Scanner i = new Scanner(System.in);
+        System.out.println("Enter the product");
+        product = i.nextLine(); 
+        File f = new File("C:\\Users\\DELL\\Desktop\\java\\file\\file.txt");
+        try{
+            Scanner s = new Scanner(f);
+            while(s.hasNextLine()){
+            System.out.println(s.nextLine());
+            }
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        }
+    }
+}
