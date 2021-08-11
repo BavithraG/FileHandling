@@ -1,0 +1,26 @@
+package words.fileoperation;
+import java.io.File;
+import java.io.FileWriter;
+import java.util.Scanner;
+public class Stock {
+    public static void main(String[] args) {
+        String pname;
+        int quantity, price;
+        System.out.println("\t\tProduct Details");
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the pname");
+        pname = s.nextLine();
+        System.out.println("Enter the quantity");
+        quantity = s.nextInt();
+        System.out.println("Enter the price");
+        price = s.nextInt();
+        try{
+            FileWriter fw = new FileWriter("C:\\Users\\DELL\\Desktop\\java\\file\\file.txt");
+            fw.write(pname+"\n"+quantity+"\n"+price);
+            fw.close();
+        }
+        catch(Exception e){
+            System.out.println("Error");
+        }
+    }
+}
